@@ -1,6 +1,6 @@
 <?php
 
-class Post {
+class Page {
   public function __construct() {
     self::registerACFGroup();
   }
@@ -8,11 +8,11 @@ class Post {
   public static function registerACFGroup() {
     if( function_exists('acf_add_local_field_group') ) {
       acf_add_local_field_group(array (
-        'key' => 'group_1',
+        'key' => 'group_2',
         'title' => 'My Group',
         'fields' => array (
           array (
-            'key' => 'field_1',
+            'key' => 'field_2',
             'label' => 'Sub Title',
             'name' => 'sub_title_2',
             'type' => 'text',
@@ -39,7 +39,7 @@ class Post {
             array (
               'param' => 'post_type',
               'operator' => '==',
-              'value' => 'post',
+              'value' => 'page',
             ),
           ),
         ),
