@@ -4,4 +4,7 @@
     var_dump(get_post_type());
     die();
   }
+  if(get_the_title() === 'Hello world!') {
+    get_template_part('template-parts/helloWorld');
+  }
 ?>

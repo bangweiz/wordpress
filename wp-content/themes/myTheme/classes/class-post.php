@@ -20,7 +20,7 @@ class Post {
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array (
-              'width' => '50',
+              'width' => '',
               'class' => '',
               'id' => '',
             ),
@@ -29,11 +29,11 @@ class Post {
             'maxlength' => '10',
             'disabled' => 0,
           ),
-          array (
-            'key' => 'field_my_test',
-            'label' => 'My Test Text',
-            'name' => 'sub_title_3',
-            'type' => 'textarea',
+          array(
+            'key' => 'field_toggle_button',
+            'label' => 'Upload Image',
+            'name' => 'enable_upload_image',
+            'type' => 'true_false',
             'instructions' => 'faygbfiaduaidnchoidm',
             'required' => 0,
             'conditional_logic' => 0,
@@ -43,54 +43,35 @@ class Post {
               'id' => '',
             ),
             'default_value' => '',
+            'message' => 0,
+            'ui' => 1
+          ),
+          array(
+            'key' => 'field_sakjfhasoh',
+            'label' => 'My Test Text',
+            'name' => 'sub_title_ashjfbajhb',
+            'type' => 'text',
+            'instructions' => 'faygbfiaduaidnchoidm',
+            'required' => 0,
+            'conditional_logic' => array(
+              array(
+                array(
+                  'field' => 'field_toggle_button',
+                  'operator' => '==',
+                  'value' => 1
+                )
+              )
+            ),
+            'wrapper' => array (
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
             'placeholder' => '',
             'maxlength' => '10',
             'disabled' => 0,
-            'rows'=> '10',        ),
-            array (
-              'key' => 'field_my_test2',
-              'label' => 'My Test Text',
-              'name' => 'sub_title_4',
-              'type' => 'url',
-              'instructions' => 'faygbfiaduaidnchoidm',
-              'required' => 0,
-              'conditional_logic' => 0,
-              'wrapper' => array (
-                'width' => '',
-                'class' => '',
-                'id' => '',
-              ),
-              'default_value' => '',
-              'placeholder' => 'www.baidu.com',
-            ),
-            array (
-              'key' => 'field_my_test3',
-              'label' => 'My Test Text',
-              'name' => 'sub_title_4',
-              'type' => 'checkbox',
-              'instructions' => 'faygbfiaduaidnchoidm',
-              'required' => 0,
-              'conditional_logic' => 0,
-              'wrapper' => array (
-                'width' => '',
-                'class' => '',
-                'id' => '',
-              ),
-              'choices' => array(
-                'option1'	=> 'option1',
-                'option2'	=> 'option2',
-                'option3'	=> 'option3'
-              ),
-              
-              'layout' => 'vertical',
-            
-              'allow_custom' => false,
-              
-             'save_custom' => false,
-              
-              'toggle' => false,
-              
-              'return_format' => 'value',       )
+          )
         ),
         'location' => array (
           array (
