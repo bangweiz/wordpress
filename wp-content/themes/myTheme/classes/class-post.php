@@ -11,30 +11,12 @@ class Post {
         'key' => 'group_1',
         'title' => 'My Post Group',
         'fields' => array (
-          array (
-            'key' => 'field_1',
-            'label' => 'My Test Text',
-            'name' => 'sub_title_2',
-            'type' => 'text',
-            'instructions' => 'faygbfiaduaidnchoidm',
-            'required' => 0,
-            'conditional_logic' => 0,
-            'wrapper' => array (
-              'width' => '',
-              'class' => '',
-              'id' => '',
-            ),
-            'default_value' => '',
-            'placeholder' => '',
-            'maxlength' => '10',
-            'disabled' => 0,
-          ),
           array(
             'key' => 'field_toggle_button',
-            'label' => 'Upload Image',
+            'label' => 'Upload Image ?',
             'name' => 'enable_upload_image',
             'type' => 'true_false',
-            'instructions' => 'faygbfiaduaidnchoidm',
+            'instructions' => 'Do you want to upload image ?',
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array (
@@ -46,12 +28,13 @@ class Post {
             'message' => 0,
             'ui' => 1
           ),
+          
           array(
-            'key' => 'field_sakjfhasoh',
-            'label' => 'My Test Text',
-            'name' => 'sub_title_ashjfbajhb',
-            'type' => 'text',
-            'instructions' => 'faygbfiaduaidnchoidm',
+            'key' => 'field_add_image',
+            'label' => 'Select your image',
+            'name' => 'select_upload_image',
+            'type' => 'image',
+            'instructions' => 'add your image',
             'required' => 0,
             'conditional_logic' => array(
               array(
@@ -67,11 +50,55 @@ class Post {
               'class' => '',
               'id' => '',
             ),
-            'default_value' => '',
-            'placeholder' => '',
-            'maxlength' => '10',
-            'disabled' => 0,
-          )
+            'default_value' => '',            
+          ),
+          array(
+            'key' => 'field_url',
+            'label' => 'Select your image',
+            'name' => 'select_url',
+            'type' => 'link',
+            'instructions' => 'add your image',
+            'required' => 0,
+            'conditional_logic' => array(
+              array(
+                array(
+                  'field' => 'field_toggle_button',
+                  'operator' => '==',
+                  'value' => 1
+                )
+              )
+            ),
+            'wrapper' => array (
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',            
+          ),
+          array(
+            'key' => 'field_textarea',
+            'label' => 'Select your image',
+            'name' => 'select_textsrea',
+            'type' => 'textarea',
+            'instructions' => 'add your image',
+            'required' => 0,
+            'conditional_logic' => array(
+              array(
+                array(
+                  'field' => 'field_toggle_button',
+                  'operator' => '==',
+                  'value' => 1
+                )
+              )
+            ),
+            'wrapper' => array (
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',            
+          )     
+        
         ),
         'location' => array (
           array (
