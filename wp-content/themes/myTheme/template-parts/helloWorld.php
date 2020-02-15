@@ -1,9 +1,7 @@
 <?php
   $id = get_the_ID();
-  var_dump($id);
-  die();
 
-  $field0 = get_field('enable_upload_image', 'option');
+  $field0 = get_field('enable_upload_image', $id);
   if ($field0){
     $field1 = get_field('field_textarea', $id);
     $field2 = get_field('field_url', $id);
@@ -14,8 +12,8 @@
 ?>
 
 <div>
-  <a href="<?php var_dump($field2)；; ?>">
-    <img src="<?php echo $field3; ?>" alt="">
+  <a href="<?php echo$field2['url']; ?>">
+    <img src="<?php echo $field3['url']; ?>" alt="">
   </a>
 </div>
 <div><p><?php echo $field1; ?></p></div>
