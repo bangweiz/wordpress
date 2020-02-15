@@ -6,7 +6,7 @@
   if(get_the_title() === 'Hello world!') {
     get_template_part('template-parts/helloWorld');
   }
-  if(get_the_title() === 'FEB11') {
-    get_template_part('template-parts/helloWorld');
+  if(get_the_title() === 'Sample Page') {
+    get_template_part('template-parts/samplePage');
   }
 ?>
