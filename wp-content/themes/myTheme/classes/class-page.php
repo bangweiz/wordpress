@@ -51,12 +51,6 @@ class Page {
               'id' => '',
             ),
             'default_value' => '',
-            'min_width' => 100,
-            'min_height' => 100,
-            'min_size' => '1KB',
-            'max_width' => 500,
-            'max_height' => 500,
-            'max_size' => 1024,
           ),
 
           array(
@@ -81,12 +75,6 @@ class Page {
               'id' => '',
             ),
             'default_value' => '',
-            'min_width' => 100,
-            'min_height' => 100,
-            'min_size' => '1KB',
-            'max_width' => 500,
-            'max_height' => 500,
-            'max_size' => 1024,
           ),
 
           array(
@@ -111,12 +99,6 @@ class Page {
               'id' => '',
             ),
             'default_value' => '',
-            'min_width' => 100,
-            'min_height' => 100,
-            'min_size' => '1KB',
-            'max_width' => 500,
-            'max_height' => 500,
-            'max_size' => 1024,
           ),
         ),
         'location' => array (

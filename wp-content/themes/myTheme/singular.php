@@ -1,4 +1,5 @@
 <?php 
+  get_header();
   if (get_the_title() === 'Login') {
     get_template_part('template-parts/login');
 
