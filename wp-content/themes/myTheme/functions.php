@@ -12,5 +12,12 @@
     wp_enqueue_style('theme_main_style', get_stylesheet_uri(), array(), time());
   }
 
+  add_action('init', 'init_remove_support',100);
+    
+  function init_remove_support(){
+    remove_post_type_support( 'post', 'editor');
+    remove_post_type_support( 'page', 'editor');
+  }
+
   add_filter( 'show_admin_bar', '__return_false' );
 
