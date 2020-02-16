@@ -1,11 +1,9 @@
 <?php
-  $id = get_the_ID();
-
-  $field0 = get_field('field_true_false_button', $id);
+  $field0 = get_field('field_true_false_button');
   if ($field0){
-    $field1 = get_field('field_image1', $id);
-    $field2 = get_field('field_image2', $id);
-    $field3 = get_field('field_image3', $id);
+    $field1 = get_field('field_image1');
+    $field2 = get_field('field_image2');
+    $field3 = get_field('field_image3');
   }
  // echo "<pre>";
  // print_r($field1);
@@ -40,5 +38,3 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-<?php get_footer(); ?>
