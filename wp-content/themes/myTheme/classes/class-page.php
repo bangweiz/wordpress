@@ -126,7 +126,7 @@ class Page
     public static function image_fields()
     {
         $field0 = get_field('field_true_false_button');
-
+        $imageUrlArray = array();
 
         if ($field0) {
             $field1 = get_field('field_image1');
@@ -134,15 +134,30 @@ class Page
             $field3 = get_field('field_image3');
 
             $imageUrlArray = array(
-                'image1' => $field1['url'],
-                'image2' => $field2['url'],
-                'image3' => $field3['url'],
-
+                array(
+                    $field1['url'],
+                    $field1['alt']
+                ),
+                array(
+                    $field2['url'],
+                    $field2['alt']
+                ),
+                array(
+                    $field3['url'],
+                    $field3['alt']
+                )
             );
         }
-
-
         return $imageUrlArray;
+    }
+
+    public static function renderPrevOrNext($label) {
+        $a = $label === 'next' ? 'next' : 'prev';
+        $b = $label === 'next' ? 'Next' : 'Previous';
+        echo '<a class="carousel-control-' . $a . '" href="#carouselExampleIndicators" role="button" data-slide="' . $a . '">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">' . $b . '</span>
+              </a>';
     }
 }
 

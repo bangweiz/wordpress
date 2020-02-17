@@ -1,55 +1,22 @@
 <?php
-
-
 $getImageUrlArray = Page::image_fields();
-//echo "<pre>";
-//print_r($getArray);
-//echo "</pre>";
-//die();
-
 ?>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-        <?php
-        for ($i = 0; $i < 3; $i++) {
-            if ($i == 0) {
-                ?>
-                <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $i ?>" class="active"></li>
-                <?php
-            } else {
-                ?>
-                <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $i ?>"></li>
-                <?php
-            }
-        }
-        ?>
+        <?php for ($i = 0; $i < count($getImageUrlArray); $i++) { ?>
+            <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $i ?>" class="<?php echo !$i ? 'active' : '' ?>"></li>
+        <?php } ?>
     </ol>
     <div class="carousel-inner">
-        <?php
-        foreach ($getImageUrlArray as $key => $value) {
-            if ($key == 'image1') {
-                ?>
-                <div class="carousel-item active">
-                    <img src="<?php echo $value ?>" class="d-block w-100" alt="">
-                </div>
-                <?php
-            } else {
-                ?>
-                <div class="carousel-item ">
-                    <img src="<?php echo $value ?>" class="d-block w-100" alt="">
-                </div>
-                <?php
-            }
-        }
-        ?>
+        <?php foreach ($getImageUrlArray as $key => $value) { ?>
+            <div class="carousel-item <?php echo !$key ? 'active' : '' ?>">
+                <img src="<?php echo $value[0] ?>" class="d-block w-100" alt="<?php echo $value[1] ?>">
+            </div>
+        <?php } ?>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+    <?php
+        Page::renderPrevOrNext('next');
+        Page::renderPrevOrNext('prev');
+    ?>
 </div>
