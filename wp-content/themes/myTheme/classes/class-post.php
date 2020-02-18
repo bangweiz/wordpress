@@ -16,7 +16,7 @@ class Post {
             'label' => 'Upload Image ?',
             'name' => 'enable_upload_image',
             'type' => 'true_false',
-            'instructions' => 'Do you want to upload image ?',
+            'instructions' => 'Do you want to upload image 3?',
             'required' => 0,
             'conditional_logic' => 0,
             'wrapper' => array (
