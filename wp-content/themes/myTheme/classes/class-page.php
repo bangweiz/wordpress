@@ -392,6 +392,34 @@ class Page
                         'hide_on_screen' => '',
                     ),
 
+<<<<<<< HEAD
+=======
+                    array(
+                        'key' => 'field_card_group',
+                        'label' => 'Card Group',
+                        'name' => 'card_group',
+                        'type' => 'group',
+                        'required' => 1,
+                        'conditional_logic' => 0,
+                        'sub_fields' => array(
+                            array(
+                                'key' => 'field_image4',
+                                'label' => 'Upload Image?',
+                                'name' => 'upload_image4',
+                                'type' => 'image',
+                                'instructions' => 'please upload image ?',
+                                'required' => 1,
+                                'conditional_logic' => 0,
+                                'wrapper' => array(
+                                    'width' => '',
+                                    'class' => '',
+                                    'id' => '',
+                                ),
+                                'default_value' => '',
+                            ),
+                        ),
+                    )
+>>>>>>> 85b204622d81b6a3dd04489f5a1a8c8c8528c4fc
                 ),
                 'location' => array(
                     array(
