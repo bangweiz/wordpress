@@ -103,6 +103,32 @@ class Page
                         ),
                         'default_value' => '',
                     ),
+
+                    array(
+                        'key' => 'field_card_group',
+                        'label' => 'Card Group',
+                        'name' => 'card_group',
+                        'type' => 'group',
+                        'required' => 1,
+                        'conditional_logic' => 0,
+                        'sub_fields' => array(
+                            array(
+                                'key' => 'field_image4',
+                                'label' => 'Upload Image?',
+                                'name' => 'upload_image4',
+                                'type' => 'image',
+                                'instructions' => 'please upload image ?',
+                                'required' => 1,
+                                'conditional_logic' => 0,
+                                'wrapper' => array(
+                                    'width' => '',
+                                    'class' => '',
+                                    'id' => '',
+                                ),
+                                'default_value' => '',
+                            ),
+                        ),
+                    )
                 ),
                 'location' => array(
                     array(
