@@ -2,6 +2,7 @@
 $getImageUrlArray = Page::image_fields();
 $getCardArray = Page::renderCardsGroup();
 
+//
 //echo '<pre>';
 //print_r($getCardArray);
 //echo '</pre>';
@@ -12,14 +13,14 @@ $getCardArray = Page::renderCardsGroup();
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-        <?php for ($i = 0; $i < count($getImageUrlArray); $i++) { ?>
-            <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $i ?>" class="<?php echo !$i ? 'active' : '' ?>"></li>
+        <?php foreach ($getImageUrlArray as $key => $value) { ?>
+            <li data-target="#carouselExampleIndicators" data-slide-to="<?php echo $key ?>" class="<?php echo !$key ? 'active' : '' ?>"></li>
         <?php } ?>
     </ol>
     <div class="carousel-inner">
         <?php foreach ($getImageUrlArray as $key => $value) { ?>
             <div class="carousel-item <?php echo !$key ? 'active' : '' ?>">
-                <img src="<?php echo $value[0] ?>" class="d-block w-100" alt="<?php echo $value[1] ?>">
+                <img src="<?php echo $value['url'] ?>" class="d-block w-100" alt="<?php echo $value['alt'] ?>">
             </div>
         <?php } ?>
     </div>

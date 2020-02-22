@@ -11,6 +11,7 @@ class Header {
                 'parent_slug' => 'theme-general-settings',
                 'page_title' => 'Header Setting',
                 'menu_title' => 'Header Setting',
+                //'parent_slug' => $option_page['menu_slug'],
                 'menu_slug' => 'acf-options-header-setting',
                 'icon_url' => 'dashicons-edit'
             ));
