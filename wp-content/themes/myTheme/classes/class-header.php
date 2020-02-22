@@ -39,17 +39,57 @@ class Header {
                 'menu_order' => 1,
                 'fields' => array(
                     array(
-                        'key' => 'field_text',
-                        'label' => 'Test',
-                        'name' => 'test_text',
-                        'type' => 'text',
+                        'key' => 'field_page_header',
+                        'label' => 'Header links',
+                        'name' => 'header_links',
+                        'type' => 'repeater',
+                        'layout' => 'row',
+                        'min' => 0,
+                        'max' => 0,
+                        'sub_fields' => array(
+                            array(
+                                'key' => 'field_links',
+                                'label' => 'Set link?',
+                                'name' => 'set_link',
+                                'type' => 'link',
+                                'instructions' => 'please set the header link ?',
+                                'required' => 1,
+                                'conditional_logic' => 0,
+                                'wrapper' => array(
+                                    'width' => '',
+                                    'class' => '',
+                                    'id' => '',
+                                ),
+                                'default_value' => '',
+                            ),
+                        ),
+
                         'required' => 0,
                         'conditional_logic' => 0,
-                        'value' => null,
 
-                    )
+                        'wrapper' => array(
+                            'width' => '',
+                            'class' => '',
+                            'id' => '',
+                        ),
+                    ),
                 )
             ));
         }
+    }
+
+    public static function renderHeaderLinks(){
+        $headerLinks = get_field('field_page_header','options');
+        $headerLinksArray = array();
+        if (is_array($headerLinks)){
+            foreach ($headerLinks as $key => $headerLink){
+
+                $headerLinksArray[$key] = array(
+                    'title' => $headerLink['set_link']['title'],
+                    'url' => $headerLink['set_link']['url']
+                );
+            }
+        }
+        return $headerLinksArray;
     }
 }

@@ -454,7 +454,7 @@ class Page
                     'title' => $value['upload_cards_title'],
                     'description' => $value['upload_cards_description'],
                     'button' => $value['upload_cards_button_name']
-              );
+                );
 
 
         }
