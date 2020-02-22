@@ -1,9 +1,7 @@
 <?php
 
 class Header {
-    public function __construct() {
-        self::registerACFGroup();
-    }
+//    public function __construct() {}
 
     public static function registerOptionPage() {
         if (function_exists('acf_add_options_page')) {

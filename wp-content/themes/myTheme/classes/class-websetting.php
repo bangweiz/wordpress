@@ -13,8 +13,8 @@ class WebSetting {
     {
         if (function_exists('acf_add_options_page')) {
             acf_add_options_page(array(
-                'page_title' => __('Website General Settings'),
-                'menu_title' => __('Website Settings'),
+                'page_title' => 'Website General Settings',
+                'menu_title' => 'Website Settings',
                 'menu_slug' => 'theme-general-settings',
                 'capability' => 'edit_posts',
                 'redirect' => false
