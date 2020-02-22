@@ -37,6 +37,10 @@ class Page
                                     'id' => '',
                                 ),
                                 'default_value' => '',
+                                'min_width' => 3000,
+                                'max_width' => 3000,
+                                'min_height' => 1055,
+                                'max_height' => 1055
                             ),
                         ),
 
@@ -437,7 +441,7 @@ class Page
         $a = $label === 'next' ? 'next' : 'prev';
         $b = $label === 'next' ? 'Next' : 'Previous';
         echo '<a class="carousel-control-' . $a . '" href="#carouselExampleIndicators" role="button" data-slide="' . $a . '">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="carousel-control-'. $a .'-icon" aria-hidden="true"></span>
                 <span class="sr-only">' . $b . '</span>
               </a>';
     }
