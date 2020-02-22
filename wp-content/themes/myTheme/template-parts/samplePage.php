@@ -2,6 +2,7 @@
 $getImageUrlArray = Page::image_fields();
 $getCardArray = Page::renderCardsGroup();
 
+//
 //echo '<pre>';
 //print_r($getImageUrlArray);
 //echo '</pre>';
