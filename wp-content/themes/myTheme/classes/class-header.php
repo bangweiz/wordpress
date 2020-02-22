@@ -6,10 +6,9 @@ class Header {
     public static function registerOptionPage() {
         if (function_exists('acf_add_options_page')) {
             acf_add_options_page(array(
-                'parent_slug' => 'theme-general-settings',
                 'page_title' => 'Header Setting',
                 'menu_title' => 'Header Setting',
-                //'parent_slug' => $option_page['menu_slug'],
+                'parent_slug' => 'theme-general-settings2',
                 'menu_slug' => 'acf-options-header-setting',
                 'icon_url' => 'dashicons-edit'
             ));
